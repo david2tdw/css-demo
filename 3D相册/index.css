@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  background: linear-gradient(#ff0 0%, #000 80%);
+  height: 100%;
+  overflow: hidden;
+}
+.wrap {
+  margin: 200px auto;
+  width: 200px;
+  height: 200px;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  perspective: 1200;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-80deg);
+  -webkit-animation: rotate 20s ;
+  /*匀速*/
+  animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.out {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 0.8;
+}
+/* 定义外层图片大小 */
+.out img {
+  width: 100%;
+  height: 100%;
+}
+.out-front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.out-back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.out-left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.out-right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.out-top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.out-bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.in {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  opacity: 0.8;
+}
+.in img {
+  width: 100px;
+  height: 100px;
+}
+
+.in-front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.in-back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.in-left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.in-right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.in-top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.in-bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.box:hover .out-front {
+  transform: rotateY(0deg)  translateZ(200px)
+}
+.box:hover .out-back {
+  transform: rotateY(180deg) translateZ(200px)
+}
+.box:hover .out-left {
+  transform: rotateY(-90deg) translateZ(200px)
+}
+.box:hover .out-right {
+  transform: rotateY(90deg)  translateZ(200px)
+}
+.box:hover .out-top {
+  transform: rotateX(90deg) translateZ(200px)
+}
+.box:hover .out-bottom {
+  transform: rotateX(-90deg) translateZ(200px)
+}
