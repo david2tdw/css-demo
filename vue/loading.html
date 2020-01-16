@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #403833;
+      }
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        cursor: default;
+        user-select: none;
+      }
+      .text {
+        position: absolute;
+
+        font-size: 14px;
+
+        color: #ffffff;
+        animation: text 2s infinite;
+      }
+      .horizontal {
+        position: absolute;
+        top: 0em;
+        left: 0em;
+        /* border: 1px solid #000; */
+      }
+      .vertical {
+        position: absolute;
+        top: -1.5em;
+        left: 1.7em;
+        transform: rotate(90deg);
+      }
+      .circlesup {
+        position: absolute;
+        top: -1em;
+        left: 0.5em;
+      }
+      .circlesdown {
+        position: absolute;
+        top: 1.2em;
+        left: 2.6em;
+        transform: rotate(180deg);
+      }
+      .circle {
+        position: absolute;
+        width: 15em;
+        height: 15em;
+        z-index: 5;
+        animation: rotate 2s infinite;
+        /* border: 1px solid red; */
+      }
+      .circle:after {
+        content: '';
+        width: 2em;
+        height: 2em;
+
+        border-radius: 50%;
+        position: absolute;
+        background: #13a3a5;
+      }
+      .circle:nth-child(2) {
+        z-index: 4;
+        animation-delay: 100ms;
+      }
+      .circle:nth-child(2)::after {
+        background: #56bebf;
+        transform: scale(0.8, 0.8);
+      }
+      .circle:nth-child(3) {
+        z-index: 3;
+        animation-delay: 225ms;
+      }
+      .circle:nth-child(3):after {
+        background: #ffa489;
+        transform: scale(0.6, 0.6);
+      }
+      .circle:nth-child(4) {
+        z-index: 2;
+        animation-delay: 350ms;
+      }
+      .circle:nth-child(4):after {
+        background: #ff6d37;
+        transform: scale(0.4, 0.4);
+      }
+      .circle:nth-child(5) {
+        z-index: 2;
+        animation-delay: 475ms;
+      }
+      .circle:nth-child(5):after {
+        background: #db2f00;
+        transform: scale(0.2, 0.2);
+      }
+      @keyframes text {
+        0% {
+          transform: scale(0.2, 0.2);
+        }
+        50% {
+          transform: scale(1, 1);
+        }
+        60% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(0.2, 0.2);
+        }
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        5% {
+          transform: rotate(0deg);
+          animation-timing-function: ease-in;
+        }
+        70% {
+          transform: rotate(360deg);
+          animation-timing-function: ease-out;
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="text">loading...</div>
+      <div class="horizontal">
+        <div class="circlesup">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="circlesdown">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="vertical">
+        <div class="circlesup">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="circlesdown">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

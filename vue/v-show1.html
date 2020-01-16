@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		
+		
+    </head>
+    <body>
+        <div id="app">
+            <span  class="span" v-show="isShow">111</span>
+        </div>
+        <script>
+           var app = new Vue({ 
+              el: '#app',
+              data: {
+                  isShow: true
+              },
+              methods: {
+                doSomething () {
+                    console.log('%c isButtonDisabled: ', 'color:#ce2da2', this.isButtonDisabled)
+                }
+              }
+            }) 
+        </script>
+		<style>
+			.span {
+			  display: none;
+			}
+		</style>
+    </body>
+</html>

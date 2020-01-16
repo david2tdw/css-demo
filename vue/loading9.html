@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>loading #9</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-size: 100%;
+        font-weight: 900;
+        height: 100%;
+      }
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        user-select: none;
+        cursor: default;
+      }
+      .loader .txt {
+        font-size: 14em;
+        text-transform: uppercase;
+        text-shadow:0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.1),
+               0 3px 5px rgba(0,0,0,.1),
+               0 5px 10px rgba(0,0,0,.1),
+               0 10px 10px rgba(0,0,0,.1),
+               0 20px 20px rgba(0,0,0,.15);
+        white-space: nowrap;
+      }
+      .loader .txt span{
+        animation: text cubic-bezier(0.750, 0.000, 0.500, 1.000) 1.2s infinite;
+        color: #F2F2EF;
+      }
+
+      .loader .txt span:nth-child(1) {
+        animation-delay: 0ms;
+      }
+      .loader .txt span:nth-child(2) {
+        animation-delay: 100ms;
+      }
+      .loader .txt span:nth-child(3) {
+        animation-delay: 200ms;
+      }
+      .loader .txt span:nth-child(4) {
+        animation-delay: 300ms;
+      }
+      .loader .txt span:nth-child(5) {
+        animation-delay: 400ms;
+      }
+      .loader .txt span:nth-child(6) {
+        animation-delay: 500ms;
+      }
+      .loader .txt span:nth-child(7) {
+        animation-delay: 600ms;
+      }
+      @keyframes text {
+        0% {
+          color: #f2f2f2;
+        }
+        40% {
+          color:#fff;
+        }
+        70%, 100% {
+          color: #f2f2f2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <span class="txt">
+        <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span></span>
+      </span>
+    </div>
+  </body>
+</html>

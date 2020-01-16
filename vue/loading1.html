@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #403833;
+      }
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        cursor: default;
+      }
+      .loader div {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ffffff;
+        text-align: center;
+        line-height: 60px;
+        font-size: 22px;
+        margin: 0 5px;
+        animation: bounce 1.5s infinite ease-in-out;
+      }
+      .loader div::after {
+        content: '';
+        position: absolute;
+        bottom: -40px;
+        left: 10px;
+        width: 40px;
+        height: 20px;
+        border-radius: 50%;
+        background: #322b27;
+      }
+      .loader div:nth-child(1) {
+        background: #db2f00;
+        color: #ffffff;
+        animation: bounceFirst 1.5s infinite ease-in-out;
+      }
+      .loader div:nth-child(2) {
+        background: #ff6d37;
+        color: #ffffff;
+        animation-delay: 50ms;
+      }
+      .loader div:nth-child(3) {
+        background: #ffa489;
+        color: #ffffff;
+        animation-delay: 100ms;
+      }
+      .loader div:nth-child(4) {
+        background: #f2f2f2;
+        color: #555;
+        animation-delay: 150ms;
+      }
+      .loader div:nth-child(5) {
+        background: #99d3d4;
+        color: #ffffff;
+        animation-delay: 200ms;
+      }
+      .loader div:nth-child(6) {
+        background: #56bebf;
+        color: #ffffff;
+        animation-delay: 250ms;
+      }
+      .loader div:nth-child(7) {
+        background: #13a3a5;
+        color: #ffffff;
+        animation-delay: 300ms;
+      }
+      @keyframes bounceFirst {
+        0% {
+          transform: translateX(0px);
+        }
+        20% {
+          transform: translateX(-50px);
+        }
+        28% {
+          transform: translateX(-50px);
+        }
+        50% {
+          transform: translateX(100px);
+        }
+        80%,
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateX(0px);
+        }
+        28% {
+          transform: translateX(0px);
+        }
+        50% {
+          transform: translateX(100px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="loader">
+      <div>l</div>
+      <div>o</div>
+      <div>a</div>
+      <div>d</div>
+      <div>i</div>
+      <div>n</div>
+      <div>g</div>
+    </div>
+  </body>
+</html>
